@@ -1,0 +1,142 @@
+    h5 {
+        color: #ABABAB;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 28px;
+        padding: 40px 356px 20px 40px;
+    }
+
+    .joke_favourites {
+        max-width: 480px;
+        background: #F8F8F8;
+        display: block;
+    }
+
+    #jokesContainerFavourites {
+        padding: 0 40px;
+    }
+
+    #jokesContainerFavourites .joke_block {
+        border-radius: 10px;
+        border: 1px solid #F8F8F8;
+        background: #FFF;
+        box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.10);
+    }
+
+    #jokesContainerFavourites .joke_block-fav {
+        float: right;
+        padding-top: 20px;
+        cursor: pointer;
+        padding-right: 20px;
+    }
+
+    #jokesContainerFavourites .joke_block-API {
+        padding-left: 80px;
+    }
+
+    #jokesContainerFavourites .icon_joke {
+        position: relative;
+        left: 20px;
+        background: #F8F8F8;
+    }
+
+    #jokesContainerFavourites .joke_block-text {
+        padding: 5px 20px 0 80px;
+    }
+
+    #jokesContainerFavourites .joke_time {
+        padding-left: 80px;
+        padding-bottom: 0;
+    }
+
+    #jokesContainerFavourites .joke_block-cats {
+        position: relative;
+        bottom: 40px;
+        max-width: 107px;
+        height: 24px;
+        left: -20px;
+        float: right;
+        border-radius: 6px;
+        background: #F8F8F8;
+    }
+
+    .mobile_btn {
+        display: none;
+    }
+
+    @media (max-width: 1024px) {
+        .mobile_btn {
+            display: block;
+            position: fixed;
+            top: 40px;
+            z-index: 10;
+            cursor: pointer;
+            right: 40px;
+            left: auto;
+        }
+
+        .joke_favourites {
+            background: none;
+        }
+
+        h5 {
+            display: none;
+        }
+
+        .menu.active {
+            right: 0;
+            z-index: 1;
+        }
+
+        .menu {
+            position: fixed;
+            right: -100%;
+            top: 0;
+            left: auto;
+            bottom: 0;
+            width: 54%;
+            z-index: 10;
+            transition: right 1s;
+            background: #F8F8F8;
+            overflow-y: auto;
+        }
+
+        .menu.active + .overlay {
+            display: block;
+        }
+
+        #jokesContainerFavourites:first-of-type {
+            margin-top: 90px;
+        }
+    }
+
+    @media (max-width: 600px) {
+        .menu {
+            width: 100%;
+        }
+
+        #jokesContainerFavourites {
+            padding: 0 20px;
+        }
+
+        .mobile_btn {
+            display: block;
+            position: fixed;
+            top: 20px;
+            z-index: 10;
+            cursor: pointer;
+            right: 40px;
+            left: auto;
+        }
+    }
+
+    @media (min-width: 600px) and (max-width: 1024px) {
+        .overlay {
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+    }

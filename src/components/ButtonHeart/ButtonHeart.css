@@ -1,0 +1,14 @@
+    .joke_block-fav {
+        background: none;
+        float: right;
+        padding-top: 40px;
+        padding-bottom: 10px;
+        cursor: pointer;
+    }
+
+    @media (max-width: 600px) {
+            .joke_block-fav {
+                padding-top: 20px;
+                padding-right: 20px;
+            }
+    }
